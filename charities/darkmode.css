@@ -1,0 +1,41 @@
+[data-bs-theme=dark] .header-main{
+  background: #30343B !important;
+}
+[data-bs-theme=dark] .navbar-header{
+  background: white !important;
+}
+[data-bs-theme=dark] .icon-bar{
+  background: black !important;
+}
+[data-bs-theme=dark] .navbar-nav{
+  background: #ffffff;
+}
+[data-bs-theme=dark] .fa-bell{
+  color: black;
+}
+
+[data-bs-theme=dark] .dropdown>.navbar-link>span{
+  color: black !important;
+}
+[data-bs-theme=dark] .dropdown>.navbar-link>b{
+  color: black !important;
+}
+[data-bs-theme=dark] .body1{
+  padding: 0 1rem;
+  background-color: #ffffff !important;
+  color: black !important;
+}
+[data-bs-theme=dark] .body1 select{
+  color: black !important;
+}
+[data-bs-theme=dark] .modal-content{
+  background-color: #373737 !important;
+}
+[data-bs-theme=dark] .light{
+  background-color: rgba(89, 89, 89, 0.7);
+  border-color: #6F747C;
+}
+[data-bs-theme=dark] .panel {
+  box-shadow: none;
+  
+}
