@@ -18,6 +18,10 @@
   .title{
     margin: 7% 0;
   }
+  .header-main{
+    padding: 1% 1%;
+    border-radius: 0px 0px 12px 12px;
+  }
 }
 @media (max-width: 530px) {
   .header-main{
@@ -49,5 +53,11 @@
     height: 340px;
     border-radius: 0px 0px 8px 8px;
   }
-  
+  .nav-link.active {
+    margin-bottom: 10% !important;
+  }
+  /* this for row in tabs with button */
+  .resbo{
+    width: 99%;
+  }
 }

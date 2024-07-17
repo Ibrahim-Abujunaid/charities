@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Color Admin | Dashboard V1</title>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+  <meta content="" name="description" />
+  <meta content="" name="author" />
+
+  <!-- ================== BEGIN core-css ================== -->
+  <link href="/assets/css/vendor.min.css" rel="stylesheet" />
+  <link href="/assets/css/google/app.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="">
+  <!-- ================== END core-css ================== -->
+
+  <!-- ================== BEGIN page-css ================== -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+  <link href="/assets/plugins/jvectormap-next/jquery-jvectormap.css" rel="stylesheet" />
+  <link href="/assets/plugins/bootstrap-datepicker/dist/css/bootstrap-datepicker.css" rel="stylesheet" />
+  <link href="/assets/plugins/gritter/css/jquery.gritter.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/62ed9ebe37.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../darkmode.css">
+  <link rel="stylesheet" href="../responsive.css">
+  <!-- ================== END page-css ================== -->
+</head>
+
+<body>
+  <!-- BEGIN #loader -->
+  <div id="loader" class="app-loader">
+    <span class="spinner"></span>
+  </div>
+  <!-- END #loader -->
+
+  <!-- BEGIN #app -->
+  <div id="app" class="app app-header-fixed app-sidebar-fixed  app-with-wide-sidebar">
+    <!-- BEGIN #header -->
+    <div id="header" class="app-header">
+      <!-- BEGIN navbar-header -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-desktop-toggler" data-toggle="app-sidebar-minify">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="index.html" class="navbar-brand">
+          <img src="/images/1648729925190 1.png" alt="">
+        </a>
+        <button type="button" class="navbar-mobile-toggler" data-toggle="app-sidebar-mobile">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <!-- END navbar-header -->
+      <!-- BEGIN header-nav -->
+      <div class="navbar-nav">
+        <div class="navbar-item navbar-form">
+          <form action="" method="POST" name="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder='Try searching "Users Today"' />
+              <button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
+            </div>
+          </form>
+        </div>
+        <div class="navbar-item dropdown">
+          <a href="#" data-bs-toggle="dropdown" class="navbar-link dropdown-toggle icon">
+            <i class="fa fa-bell"></i>
+            <span class="badge">5</span>
+          </a>
+          <div class="dropdown-menu media-list dropdown-menu-end">
+            <div class="dropdown-header">Notifications (5)</div>
+            <a href="javascript:;" class="dropdown-item media">
+              <div class="media-left">
+                <i class="fa fa-bug media-object bg-gray-400"></i>
+              </div>
+              <div class="media-body">
+                <h6 class="media-heading">Server Error Reports <i class="fa fa-exclamation-circle text-danger"></i></h6>
+                <div class="text-muted fs-12px">3 minutes ago</div>
+              </div>
+            </a>
+            <a href="javascript:;" class="dropdown-item media">
+              <div class="media-left">
+                <img src="/assets/img/user/user-1.jpg" class="media-object" alt="" />
+                <i class="fab fa-facebook-messenger text-blue media-object-icon"></i>
+              </div>
+              <div class="media-body">
+                <h6 class="media-heading">John Smith</h6>
+                <p>Quisque pulvinar tellus sit amet sem scelerisque tincidunt.</p>
+                <div class="text-muted fs-12px">25 minutes ago</div>
+              </div>
+            </a>
+            <a href="javascript:;" class="dropdown-item media">
+              <div class="media-left">
+                <img src="/assets/img/user/user-2.jpg" class="media-object" alt="" />
+                <i class="fab fa-facebook-messenger text-blue media-object-icon"></i>
+              </div>
+              <div class="media-body">
+                <h6 class="media-heading">Olivia</h6>
+                <p>Quisque pulvinar tellus sit amet sem scelerisque tincidunt.</p>
+                <div class="text-muted fs-12px">35 minutes ago</div>
+              </div>
+            </a>
+            <a href="javascript:;" class="dropdown-item media">
+              <div class="media-left">
+                <i class="fa fa-plus media-object bg-gray-400"></i>
+              </div>
+              <div class="media-body">
+                <h6 class="media-heading"> New User Registered</h6>
+                <div class="text-muted fs-12px">1 hour ago</div>
+              </div>
+            </a>
+            <a href="javascript:;" class="dropdown-item media">
+              <div class="media-left">
+                <i class="fa fa-envelope media-object bg-gray-400"></i>
+                <i class="fab fa-google text-warning media-object-icon fs-14px"></i>
+              </div>
+              <div class="media-body">
+                <h6 class="media-heading"> New Email From John</h6>
+                <div class="text-muted fs-12px">2 hour ago</div>
+              </div>
+            </a>
+            <div class="dropdown-footer text-center">
+              <a href="javascript:;" class="text-decoration-none">View more</a>
+            </div>
+          </div>
+        </div>
+        <div class="navbar-item navbar-user dropdown">
+          <a href="#" class="navbar-link dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown">
+            <img src="/assets/img/user/user-13.jpg" alt="" />
+            <span class="d-none d-md-inline">Adam Schwartz</span> <b class="caret ms-lg-2"></b>
+          </a>
+          <div class="dropdown-menu dropdown-menu-end me-1">
+            <a href="extra_profile.html" class="dropdown-item">Edit Profile</a>
+            <a href="email_inbox.html" class="dropdown-item d-flex align-items-center">
+              Inbox
+              <span class="badge bg-danger rounded-pill ms-auto pt-5px">2</span>
+            </a>
+            <a href="calendar.html" class="dropdown-item">Calendar</a>
+            <a href="extra_settings_page.html" class="dropdown-item">Settings</a>
+            <div class="dropdown-divider"></div>
+            <a href="login.html" class="dropdown-item">Log Out</a>
+          </div>
+        </div>
+      </div>
+      <!-- END header-nav -->
+    </div>
+    <!-- END #header -->
+
+    <!-- BEGIN #sidebar -->
+    <div id="sidebar" class="app-sidebar">
+      <!-- BEGIN scrollbar -->
+      <div class="app-sidebar-content" data-scrollbar="true" data-height="100%">
+        <!-- BEGIN menu -->
+        <div class="menu">
+          <div class="menu-profile">
+            <a href="javascript:;" class="menu-profile-link" data-toggle="app-sidebar-profile"
+              data-target="#appSidebarProfileMenu">
+              <div class="menu-profile-cover with-shadow"></div>
+              <div class="menu-profile-image">
+                <img src="/images/Ellipse 70.png" alt="" />
+              </div>
+              <div class="menu-profile-info">
+                <div class="d-flex align-items-center">
+                  <div class="flex-grow-1">
+                    Bilal ali
+                  </div>
+                </div>
+                <small>Ui/Ux Designer</small>
+              </div>
+            </a>
+          </div>
+          <div class="menu-item ">
+            <div class="menu-header">Projects and Doation</div>
+            <a href="index.html" class="menu-link">
+              <div class="menu-icon">
+                <i class="bi bi-grid-fill"></i>
+              </div>
+              <div class="menu-text">Dashboard </div>
+            </a>
+          </div>
+          <div class="menu-item has-sub active">
+            <a href="javascript:;" class="menu-link">
+              <div class="menu-icon">
+                <i class="fa-regular fa-sun"></i>
+              </div>
+              <div class="menu-text">Projects</div>
+              <div class="menu-caret"></div>
+            </a>
+            <div class="menu-submenu">
+              <div class="menu-item ">
+                <a href="CostCenters.html" class="menu-link">
+                  <div class="menu-text">Cost centers</div>
+                </a>
+              </div>
+              <div class="menu-item ">
+                <a href="AdministrativeRatio.html" class="menu-link">
+                  <div class="menu-text">Administrative ratios</div>
+                </a>
+              </div>
+              <div class="menu-item ">
+                <a href="ProjectSectors.html" class="menu-link">
+                  <div class="menu-text">Project sectors</div>
+                </a>
+              </div>
+              <div class="menu-item active">
+                <a href="TypesOfProjects.html" class="menu-link">
+                  <div class="menu-text">Types of projects</div>
+                </a>
+              </div>
+              <div class="menu-item">
+                <a href="ProjectCategories.html" class="menu-link">
+                  <div class="menu-text">Project categories</div>
+                </a>
+              </div>
+              <div class="menu-item">
+                <a href="PublicProjects.html" class="menu-link">
+                  <div class="menu-text">Public projects</div>
+                </a>
+              </div>
+              <div class="menu-item">
+                <a href="#7" class="menu-link">
+                  <div class="menu-text">private projects</div>
+                </a>
+              </div>
+              <div class="menu-item">
+                <a href="#8" class="menu-link">
+                  <div class="menu-text">Balance transfer</div>
+                </a>
+              </div>
+              <div class="menu-item">
+                <a href="#9" class="menu-link">
+                  <div class="menu-text">Project disbursement bonds</div>
+                </a>
+              </div>
+              <div class="menu-item">
+                <a href="#10" class="menu-link">
+                  <div class="menu-text">Patient disbursement bonds</div>
+                </a>
+              </div>
+              <div class="menu-item">
+                <a href="#11" class="menu-link">
+                  <div class="menu-text">Service disbursement bonds</div>
+                </a>
+              </div>
+              <div class="menu-item">
+                <a href="#12" class="menu-link">
+                  <div class="menu-text">Request to study form</div>
+                </a>
+              </div>
+              <div class="menu-item">
+                <a href="#13" class="menu-link">
+                  <div class="menu-text">Budgets</div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="menu-item has-sub">
+            <a href="javascript:;" class="menu-link">
+              <div class="menu-icon">
+                <i class="fa-solid fa-hand-holding-heart"></i>
+              </div>
+              <div class="menu-text">Donations</div>
+              <div class="menu-caret"></div>
+            </a>
+            <div class="menu-submenu">
+              <div class="menu-item">
+                <a href="#14" class="menu-link">
+                  <div class="menu-text">Donors</div>
+                </a>
+              </div>
+              <div class="menu-item">
+                <a href="#15" class="menu-link">
+                  <div class="menu-text">Benefactor</div>
+                </a>
+              </div>
+              <div class="menu-item">
+                <a href="#16" class="menu-link">
+                  <div class="menu-text">Receipt voucher</div>
+                </a>
+              </div>
+              <div class="menu-item">
+                <a href="#17" class="menu-link">
+                  <div class="menu-text">Donor integration</div>
+                </a>
+              </div>
+              <div class="menu-item">
+                <a href="#18" class="menu-link">
+                  <div class="menu-text">Donor complaints</div>
+                </a>
+              </div>
+              <div class="menu-item">
+                <a href="#19" class="menu-link">
+                  <div class="menu-text">Certain capture</div>
+                </a>
+              </div>
+              <div class="menu-item">
+                <a href="#20" class="menu-link">
+                  <div class="menu-text">Certain receivable books</div>
+                </a>
+              </div>
+              <div class="menu-item">
+                <a href="#21" class="menu-link">
+                  <div class="menu-text">Beneficiaries</div>
+                </a>
+              </div>
+              <div class="menu-item">
+                <a href="#22" class="menu-link">
+                  <div class="menu-text">Sponsoring companies</div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="menu-item has-sub">
+            <a href="javascript:;" class="menu-link">
+              <div class="menu-icon">
+                <i class="fa-regular fa-credit-card"></i>
+              </div>
+              <div class="menu-text">Deductions</div>
+              <div class="menu-caret"></div>
+            </a>
+            <div class="menu-submenu">
+              <div class="menu-item">
+                <a href="#23" class="menu-link">
+                  <div class="menu-text">Deduction books</div>
+                </a>
+              </div>
+              <div class="menu-item">
+                <a href="#24" class="menu-link">
+                  <div class="menu-text">Bank files</div>
+                </a>
+              </div>
+              <div class="menu-item">
+                <a href="#25" class="menu-link">
+                  <div class="menu-text">Deductions</div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="menu-item has-sub">
+            <a href="javascript:;" class="menu-link">
+              <div class="menu-icon">
+                <i class="fa-solid fa-gear"></i>
+              </div>
+              <div class="menu-text">Settings</div>
+              <div class="menu-caret"></div>
+            </a>
+            <div class="menu-submenu">
+              <div class="menu-item">
+                <a href="#26" class="menu-link">
+                  <div class="menu-text">User permissions</div>
+                </a>
+              </div>
+              <div class="menu-item">
+                <a href="#27" class="menu-link">
+                  <div class="menu-text">Settings</div>
+                </a>
+              </div>
+              <div class="menu-item">
+                <a href="#28" class="menu-link">
+                  <div class="menu-text">Account definitions</div>
+                </a>
+              </div>
+              <div class="menu-item">
+                <a href="#29" class="menu-link">
+                  <div class="menu-text">Types beneficiaries</div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <a href="./medical-Admin/Reports.html" class="menu-link">
+              <div class="menu-icon">
+                <i class="fa-solid fa-file-lines"></i>
+              </div>
+              <div class="menu-text">Reborts</div>
+              <div class="menu-caret"></div>
+            </a>
+          </div>
+        </div>
+        <!-- END menu -->
+      </div>
+      <!-- END scrollbar -->
+    </div>
+    <div class="app-sidebar-bg"></div>
+    <div class="app-sidebar-mobile-backdrop"><a href="#" data-dismiss="app-sidebar-mobile" class="stretched-link"></a>
+    </div>
+    <!-- END #sidebar -->
+
+    <!-- BEGIN #content -->
+    <div id="content" class="app-content">
+      <div class="header-main">
+        <a href="../index.html">
+          <div><span>Medical Administration</span></div>
+        </a>
+        <div><span>Project Management</span></div>
+        <a href="Dashboard.html">
+          <div class="active1"><span>Projects and Donations</span></div>
+        </a>
+        <div><span>Orphans</span></div>
+        <div><span>property in Mortmain</span></div>
+        <div><span>Guarantees</span></div>
+      </div>
+      <h1 class="title">Edit new project type</h1>
+      <div class="table-Diseaseservices">
+        <div class="row resbo">
+          <div class="col-lg-10 col-md-12 col-sm-12">
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a href="#default-tab-1" data-bs-toggle="tab" class="nav-link active">
+                  <span class="d-sm-none">Project info</span>
+                  <span class="d-sm-block d-none">Project info</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#default-tab-2" data-bs-toggle="tab" class="nav-link add ">
+                  <span class="d-sm-none">Contract stages</span>
+                  <span class="d-sm-block d-none">Contract stages</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#default-tab-3" data-bs-toggle="tab" class="nav-link add1">
+                  <span class="d-sm-none">Contract pay</span>
+                  <span class="d-sm-block d-none">Contract pay</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#default-tab-4" data-bs-toggle="tab" class="nav-link add2">
+                  <span class="d-sm-none">Attachments</span>
+                  <span class="d-sm-block d-none">Attachments</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-12 d-flex  justify-content-end">
+            <a class="anck" href="#modal-dialog1" data-bs-toggle="modal"><button
+                class="add-Diseaseservices mb-2 non">Add stage</button></a>
+            <a class="anck" href="#modal-dialog2" data-bs-toggle="modal"><button
+                class="add-Diseaseservices mb-2 non1">Add Payment</button></a>
+            <a class="anck" href="#modal-dialog3" data-bs-toggle="modal"><button
+                class="add-Diseaseservices mb-2 non2">Add attachments</button></a>
+          </div>
+        </div>
+        <!-- END nav-tabs -->
+        <!-- BEGIN tab-content -->
+        <div class="tab-content panel rounded-0 p-3 m-0">
+          <!-- BEGIN tab-pane -->
+          <div class="tab-pane fade active show" id="default-tab-1">
+            <!-- begin panel tab1 -->
+            <div class="panel-body">
+              <form action="/" method="POST">
+                <fieldset>
+                  <div class="mb-15px">
+                    <div class="row ">
+                      <div class="col-md-6 col-lg-4 mt-3">
+                        <label class="form-label col-form-label">Project name</label>
+                        <div class="col">
+                          <input type="email" class="form-control" id="exampleInputEmail2" />
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-lg-4 mt-3">
+                        <label class="form-label col-form-label">Project sector</label>
+                        <div class="col">
+                          <select class="form-select">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-lg-4 mt-3">
+                        <label class="form-label col-form-label">Terms of the contract</label>
+                        <div class="col">
+                          <input type="email" class="form-control" id="exampleInputEmail2" />
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-lg-4 mt-3">
+                        <label class="form-label col-form-label">item</label>
+                        <div class="col">
+                          <select class="form-select">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-lg-4 mt-3">
+                        <label class="form-label col-form-label">Included in the budget</label>
+                        <div class="col mt-2">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-lg-4 mt-3">
+                        <label class="form-label col-form-label">Excluding support requests from the license?</label>
+                        <div class="col mt-2">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+                      </div>
+                      <div class="col-md-12 col-lg-8 mt-3">
+                        <label class="form-label col-form-label">Excluding support requests from the license?</label>
+                        <div class="row">
+                          <div class="col-md-6 col-xl-3  mt-4">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Medical support (12.5 %)
+                            </label>
+                          </div>
+                          <div class="col-md-6 col-xl-3 mt-4">
+                            <input class="form-check-input" checked type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              General support (12.5 %)
+                            </label>
+                          </div>
+                          <div class="col-md-6 col-xl-3 mt-4">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              External support (12.5 %)
+                            </label>
+                          </div>
+                          <div class="col-md-6 col-xl-3 mt-4">
+                            <input class="form-check-input" checked type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              General support (12.5 %)
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 d-flex gap-3 mt-4 justify-content-end">
+                      <a href="TypesOfProjects.html"><button type="button"
+                          class="btn-1 btn btn-secondary">Back</button></a>
+                      <a href="TypesOfProjects.html"><button type="button" class="btn-1 btn btn-info">save</button></a>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+            <!-- End panel tab1 -->
+          </div>
+          <!-- END tab-pane -->
+          <!-- BEGIN tab-pane -->
+          <div class="tab-pane fade " id="default-tab-2">
+            <div class="panel panel-inverse" data-sortable-id="table-basic-5">
+              <!-- BEGIN panel-body -->
+              <div class="panel-body">
+                <!-- BEGIN table-responsive -->
+                <div class="table-responsive">
+                  <table class="table table-striped mb-0">
+                    <thead>
+                      <tr>
+                        <th>Payment name</th>
+                        <th>contract value</th>
+                        <th>Ranking</th>
+                        <th>Reminder period</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>2</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>20</td>
+                        <td class="center-Delete"><i class="fa-solid fa-trash-can"></i></td>
+                      </tr>
+                      <tr>
+                        <td>55</td>
+                        <td>30</td>
+                        <td>55</td>
+                        <td>66</td>
+                        <td class="center-Delete"><i class="fa-solid fa-trash-can"></i></td>
+                      </tr>
+                      <tr>
+                        <td>33</td>
+                        <td>55</td>
+                        <td>95</td>
+                        <td>65</td>
+                        <td class="center-Delete"><i class="fa-solid fa-trash-can"></i></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- END table-responsive -->
+              </div>
+              <!-- END panel-body -->
+            </div>
+          </div>
+          <!-- END tab-pane -->
+          <!-- BEGIN tab-pane -->
+          <div class="tab-pane fade" id="default-tab-3">
+            <div class="table-responsive">
+              <table class="table table-striped mb-0 text-center">
+                <thead>
+                  <tr>
+                    <th>Payment address</th>
+                    <th>Contract value</th>
+                    <th>comments</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>33</td>
+                    <td>55</td>
+                    <td>95</td>
+                    <td class="center-Delete"><i class="fa-solid fa-trash-can"></i></td>
+                  </tr>
+                  <tr>
+                    <td>33</td>
+                    <td>55</td>
+                    <td>95</td>
+                    <td class="center-Delete"><i class="fa-solid fa-trash-can"></i></td>
+                  </tr>
+                  <tr>
+                    <td>33</td>
+                    <td>55</td>
+                    <td>95</td>
+                    <td class="center-Delete"><i class="fa-solid fa-trash-can"></i></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="default-tab-4">
+            <div class="table-responsive">
+              <table class="table table-striped mb-0 text-center">
+                <thead>
+                  <tr>
+                    <th>Attachment name</th>
+                    <th>Attachment is mandatory</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>-------</td>
+                    <td>Yes</td>
+                    <td class="center-Delete"><i class="fa-solid fa-trash-can"></i></td>
+                  </tr>
+                  <tr>
+                    <td>-------</td>
+                    <td>Yes</td>
+                    <td class="center-Delete"><i class="fa-solid fa-trash-can"></i></td>
+                  </tr>
+                  <tr>
+                    <td>-------</td>
+                    <td>Yes</td>
+                    <td class="center-Delete"><i class="fa-solid fa-trash-can"></i></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+          <!-- END tab-pane -->
+        </div>
+        <!-- END tab-content -->
+      </div>
+      <!-- **modals dialogs for payment methods** -->
+      <!-- #modal-dialog1 -->
+      <div class="modal fade" id="modal-dialog1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Add a kinship relationship</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-6 col-lg-4 mt-3">
+                  <label class="form-label col-form-label">Ranking</label>
+                  <div class="col-12">
+                    <input type="email" class="form-control" id="exampleInputEmail2" />
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mt-3">
+                  <label class="form-label col-form-label">Duration</label>
+                  <div class="col-12">
+                    <input type="email" class="form-control" id="exampleInputEmail2" />
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mt-3">
+                  <label class="form-label col-form-label">Stage title</label>
+                  <div class="col-12">
+                    <input type="email" class="form-control" id="exampleInputEmail2" />
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mt-3">
+                  <label class="form-label col-form-label">Advance reminder</label>
+                  <div class="col-12">
+                    <input type="email" class="form-control" id="exampleInputEmail2" />
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mt-3">
+                  <label class="form-label col-form-label">first warning</label>
+                  <div class="col-12">
+                    <input type="email" class="form-control" id="exampleInputEmail2" />
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mt-3">
+                  <label class="form-label col-form-label">second warning</label>
+                  <div class="col-12">
+                    <input type="email" class="form-control" id="exampleInputEmail2" />
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mt-3">
+                  <label class="form-label col-form-label">third warning</label>
+                  <div class="col-12">
+                    <input type="email" class="form-control" id="exampleInputEmail2" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer col-md-12 d-flex  mt-5 justify-content-end">
+              <a href="javascript:;" data-bs-dismiss="modal"><button type="button"
+                  class="btn-1 btn btn-info">save</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end #modal-dialog1 -->
+      <!-- #modal-dialog2 -->
+      <div class="modal fade" id="modal-dialog2">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Add Payment</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-6 col-lg-4 mt-3">
+                  <label class="form-label col-form-label">Payment address</label>
+                  <div class="col-12">
+                    <input type="email" class="form-control" id="exampleInputEmail2" />
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mt-3">
+                  <label class="form-label col-form-label">Contract value</label>
+                  <div class="col-12">
+                    <input type="email" class="form-control" id="exampleInputEmail2" />
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mt-3">
+                  <label class="form-label col-form-label">comments</label>
+                  <div class="col-12">
+                    <input type="email" class="form-control" id="exampleInputEmail2" />
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mt-3">
+                  <label class="form-label col-form-label">advance payment?</label>
+                  <div class="col mt-2">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer col-md-12 d-flex  mt-5 justify-content-end">
+              <a href="javascript:;" data-bs-dismiss="modal"><button type="button"
+                  class="btn-1 btn btn-info">save</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end #modal-dialog2 -->
+      <!-- #modal-dialog3 -->
+      <div class="modal fade" id="modal-dialog3">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Add Wire Money Details</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-6 col-lg-6 mt-1">
+                  <label class="form-label col-form-label">Attachment name</label>
+                  <div class="col-12">
+                    <input type="email" class="form-control" id="exampleInputEmail2" />
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-6 mt-1">
+                  <label class="form-label col-form-label">Attachment is mandatory</label>
+                  <div class="col-12">
+                    <input type="email" class="form-control" id="exampleInputEmail2" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer col-md-12 d-flex  mt-5 justify-content-end">
+              <a href="javascript:;" data-bs-dismiss="modal"><button type="button"
+                  class="btn-1 btn btn-info">save</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end #modal-dialog3 -->
+      <!-- END**modals dialogs for payment methods** -->
+    </div>
+    <!-- END #content -->
+
+    <!-- BEGIN theme-panel -->
+    <div class="theme-panel">
+      <a href="javascript:;" data-toggle="theme-panel-expand" class="theme-collapse-btn"><i class="fa fa-cog"></i></a>
+      <div class="theme-panel-content" data-scrollbar="true" data-height="100%">
+        <h5>App Settings</h5>
+
+        <!-- BEGIN theme-list -->
+        <div class="theme-list">
+          <div class="theme-list-item"><a href="javascript:;" class="theme-list-link bg-red"
+              data-theme-class="theme-red" data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover"
+              data-bs-container="body" data-bs-title="Red">&nbsp;</a></div>
+          <div class="theme-list-item"><a href="javascript:;" class="theme-list-link bg-pink"
+              data-theme-class="theme-pink" data-toggle="theme-selector" data-bs-toggle="tooltip"
+              data-bs-trigger="hover" data-bs-container="body" data-bs-title="Pink">&nbsp;</a></div>
+          <div class="theme-list-item"><a href="javascript:;" class="theme-list-link bg-orange"
+              data-theme-class="theme-orange" data-toggle="theme-selector" data-bs-toggle="tooltip"
+              data-bs-trigger="hover" data-bs-container="body" data-bs-title="Orange">&nbsp;</a></div>
+          <div class="theme-list-item"><a href="javascript:;" class="theme-list-link bg-yellow"
+              data-theme-class="theme-yellow" data-toggle="theme-selector" data-bs-toggle="tooltip"
+              data-bs-trigger="hover" data-bs-container="body" data-bs-title="Yellow">&nbsp;</a></div>
+          <div class="theme-list-item"><a href="javascript:;" class="theme-list-link bg-lime"
+              data-theme-class="theme-lime" data-toggle="theme-selector" data-bs-toggle="tooltip"
+              data-bs-trigger="hover" data-bs-container="body" data-bs-title="Lime">&nbsp;</a></div>
+          <div class="theme-list-item"><a href="javascript:;" class="theme-list-link bg-green"
+              data-theme-class="theme-green" data-toggle="theme-selector" data-bs-toggle="tooltip"
+              data-bs-trigger="hover" data-bs-container="body" data-bs-title="Green">&nbsp;</a></div>
+          <div class="theme-list-item"><a href="javascript:;" class="theme-list-link bg-teal"
+              data-theme-class="theme-teal" data-toggle="theme-selector" data-bs-toggle="tooltip"
+              data-bs-trigger="hover" data-bs-container="body" data-bs-title="Teal">&nbsp;</a></div>
+          <div class="theme-list-item"><a href="javascript:;" class="theme-list-link bg-cyan"
+              data-theme-class="theme-cyan" data-toggle="theme-selector" data-bs-toggle="tooltip"
+              data-bs-trigger="hover" data-bs-container="body" data-bs-title="Cyan">&nbsp;</a></div>
+          <div class="theme-list-item active"><a href="javascript:;" class="theme-list-link bg-blue" data-theme-class=""
+              data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body"
+              data-bs-title="Default">&nbsp;</a></div>
+          <div class="theme-list-item"><a href="javascript:;" class="theme-list-link bg-purple"
+              data-theme-class="theme-purple" data-toggle="theme-selector" data-bs-toggle="tooltip"
+              data-bs-trigger="hover" data-bs-container="body" data-bs-title="Purple">&nbsp;</a></div>
+          <div class="theme-list-item"><a href="javascript:;" class="theme-list-link bg-indigo"
+              data-theme-class="theme-indigo" data-toggle="theme-selector" data-bs-toggle="tooltip"
+              data-bs-trigger="hover" data-bs-container="body" data-bs-title="Indigo">&nbsp;</a></div>
+          <div class="theme-list-item"><a href="javascript:;" class="theme-list-link bg-black"
+              data-theme-class="theme-gray-600" data-toggle="theme-selector" data-bs-toggle="tooltip"
+              data-bs-trigger="hover" data-bs-container="body" data-bs-title="Black">&nbsp;</a></div>
+        </div>
+        <!-- END theme-list -->
+
+        <div class="theme-panel-divider"></div>
+
+        <div class="row mt-10px">
+          <div class="col-8 control-label text-body">
+            <div>Dark Mode <span class="badge bg-primary ms-1 py-2px position-relative" style="top: -1px;">NEW</span>
+            </div>
+            <div class="lh-14">
+              <small class="text-body opacity-50">
+                Adjust the appearance to reduce glare and give your eyes a break.
+              </small>
+            </div>
+          </div>
+          <div class="col-4 d-flex">
+            <div class="form-check form-switch ms-auto mb-0">
+              <input type="checkbox" class="form-check-input" name="app-theme-dark-mode" id="appThemeDarkMode"
+                value="1" />
+              <label class="form-check-label" for="appThemeDarkMode">&nbsp;</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="theme-panel-divider"></div>
+
+        <!-- BEGIN theme-switch -->
+        <div class="row mt-10px align-items-center">
+          <div class="col-8 control-label text-body">Header Fixed</div>
+          <div class="col-4 d-flex">
+            <div class="form-check form-switch ms-auto mb-0">
+              <input type="checkbox" class="form-check-input" name="app-header-fixed" id="appHeaderFixed" value="1"
+                checked />
+              <label class="form-check-label" for="appHeaderFixed">&nbsp;</label>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-10px align-items-center">
+          <div class="col-8 control-label text-body">Header Inverse</div>
+          <div class="col-4 d-flex">
+            <div class="form-check form-switch ms-auto mb-0">
+              <input type="checkbox" class="form-check-input" name="app-header-inverse" id="appHeaderInverse"
+                value="1" />
+              <label class="form-check-label" for="appHeaderInverse">&nbsp;</label>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-10px align-items-center">
+          <div class="col-8 control-label text-body">Sidebar Fixed</div>
+          <div class="col-4 d-flex">
+            <div class="form-check form-switch ms-auto mb-0">
+              <input type="checkbox" class="form-check-input" name="app-sidebar-fixed" id="appSidebarFixed" value="1"
+                checked />
+              <label class="form-check-label" for="appSidebarFixed">&nbsp;</label>
+            </div>
+          </div>
+        </div>
+        <!-- END theme-switch -->
+
+        <div class="theme-panel-divider"></div>
+
+        <h5>Admin Design (5)</h5>
+        <!-- BEGIN theme-version -->
+        <div class="theme-version">
+          <div class="theme-version-item">
+            <a href="../template_html/index_v2.html" class="theme-version-link">
+              <span style="background-image: url(/assets/img/theme/default.jpg);" class="theme-version-cover"></span>
+            </a>
+          </div>
+          <div class="theme-version-item">
+            <a href="../template_transparent/index_v2.html" class="theme-version-link">
+              <span style="background-image: url(/assets/img/theme/transparent.jpg);"
+                class="theme-version-cover"></span>
+            </a>
+          </div>
+          <div class="theme-version-item">
+            <a href="../template_apple/index_v2.html" class="theme-version-link">
+              <span style="background-image: url(/assets/img/theme/apple.jpg);" class="theme-version-cover"></span>
+            </a>
+          </div>
+          <div class="theme-version-item">
+            <a href="../template_material/index_v2.html" class="theme-version-link">
+              <span style="background-image: url(/assets/img/theme/material.jpg);" class="theme-version-cover"></span>
+            </a>
+          </div>
+          <div class="theme-version-item">
+            <a href="../template_facebook/index_v2.html" class="theme-version-link">
+              <span style="background-image: url(/assets/img/theme/facebook.jpg);" class="theme-version-cover"></span>
+            </a>
+          </div>
+          <div class="theme-version-item">
+            <a href="../template_google/index_v2.html" class="theme-version-link active">
+              <span style="background-image: url(/assets/img/theme/google.jpg);" class="theme-version-cover"></span>
+            </a>
+          </div>
+        </div>
+        <!-- END theme-version -->
+
+        <div class="theme-panel-divider"></div>
+
+        <h5>Language Version (7)</h5>
+        <!-- BEGIN theme-version -->
+        <div class="theme-version">
+          <div class="theme-version-item">
+            <a href="../template_html/index.html" class="theme-version-link active">
+              <span style="background-image: url(/assets/img/version/html.jpg);" class="theme-version-cover"></span>
+            </a>
+          </div>
+          <div class="theme-version-item">
+            <a href="../template_ajax/index.html" class="theme-version-link">
+              <span style="background-image: url(/assets/img/version/ajax.jpg);" class="theme-version-cover"></span>
+            </a>
+          </div>
+          <div class="theme-version-item">
+            <a href="../template_angularjs/index.html" class="theme-version-link">
+              <span style="background-image: url(/assets/img/version/angular1x.jpg);"
+                class="theme-version-cover"></span>
+            </a>
+          </div>
+          <div class="theme-version-item">
+            <a href="../template_angularjs17/index.html" class="theme-version-link">
+              <span style="background-image: url(/assets/img/version/angular10x.jpg);"
+                class="theme-version-cover"></span>
+            </a>
+          </div>
+          <div class="theme-version-item">
+            <a href="javascript:alert('Laravel 10 Version only available in downloaded version.');"
+              class="theme-version-link">
+              <span style="background-image: url(/assets/img/version/laravel.jpg);" class="theme-version-cover"></span>
+            </a>
+          </div>
+          <div class="theme-version-item">
+            <a href="../template_vue3/index.html" class="theme-version-link">
+              <span style="background-image: url(/assets/img/version/vuejs.jpg);" class="theme-version-cover"></span>
+            </a>
+          </div>
+          <div class="theme-version-item">
+            <a href="../template_react/index.html" class="theme-version-link">
+              <span style="background-image: url(/assets/img/version/reactjs.jpg);" class="theme-version-cover"></span>
+            </a>
+          </div>
+          <div class="theme-version-item">
+            <a href="javascript:alert('.NET Core 7.0 MVC Version only available in downloaded version.');"
+              class="theme-version-link">
+              <span style="background-image: url(/assets/img/version/dotnet.jpg);" class="theme-version-cover"></span>
+            </a>
+          </div>
+        </div>
+        <!-- END theme-version -->
+
+        <div class="theme-panel-divider"></div>
+
+        <h5>Frontend Design (5)</h5>
+        <!-- BEGIN theme-version -->
+        <div class="theme-version">
+          <div class="theme-version-item">
+            <a href="../../../frontend/template/template_one_page_parallax/index.html" class="theme-version-link">
+              <span style="background-image: url(/assets/img/theme/one-page-parallax.jpg);"
+                class="theme-version-cover"></span>
+            </a>
+          </div>
+          <div class="theme-version-item">
+            <a href="../../../frontend/template/template_e_commerce/index.html" class="theme-version-link">
+              <span style="background-image: url(/assets/img/theme/e-commerce.jpg);" class="theme-version-cover"></span>
+            </a>
+          </div>
+          <div class="theme-version-item">
+            <a href="../../../frontend/template/template_blog/index.html" class="theme-version-link">
+              <span style="background-image: url(/assets/img/theme/blog.jpg);" class="theme-version-cover"></span>
+            </a>
+          </div>
+          <div class="theme-version-item">
+            <a href="../../../frontend/template/template_forum/index.html" class="theme-version-link">
+              <span style="background-image: url(/assets/img/theme/forum.jpg);" class="theme-version-cover"></span>
+            </a>
+          </div>
+          <div class="theme-version-item">
+            <a href="../../../frontend/template/template_corporate/index.html" class="theme-version-link">
+              <span style="background-image: url(/assets/img/theme/corporate.jpg);" class="theme-version-cover"></span>
+            </a>
+          </div>
+        </div>
+        <!-- END theme-version -->
+
+        <div class="theme-panel-divider"></div>
+
+        <a href="https://seantheme.com/color-admin/documentation/"
+          class="btn btn-dark d-block w-100 rounded-pill mb-10px" target="_blank"><b>Documentation</b></a>
+        <a href="javascript:;" class="btn btn-default d-block w-100 rounded-pill"
+          data-toggle="reset-local-storage"><b>Reset Local Storage</b></a>
+      </div>
+    </div>
+    <!-- END theme-panel -->
+    <!-- BEGIN scroll-top-btn -->
+    <a href="javascript:;" class="btn btn-icon btn-circle btn-theme btn-scroll-to-top" data-toggle="scroll-to-top"><i
+        class="fa fa-angle-up"></i></a>
+    <!-- END scroll-top-btn -->
+  </div>
+  <!-- END #app -->
+
+  <!-- ================== BEGIN core-js ================== -->
+  <script src="/assets/js/vendor.min.js"></script>
+  <script src="/assets/js/app.min.js"></script>
+  <!-- ================== END core-js ================== -->
+
+  <!-- ================== BEGIN page-js ================== -->
+  <script src="../roles.js"></script>
+  <script src="../assets/plugins/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="/assets/plugins/gritter/js/jquery.gritter.js"></script>
+  <script src="/assets/plugins/flot/source/jquery.canvaswrapper.js"></script>
+  <script src="/assets/plugins/flot/source/jquery.colorhelpers.js"></script>
+  <script src="/assets/plugins/flot/source/jquery.flot.js"></script>
+  <script src="/assets/plugins/flot/source/jquery.flot.saturated.js"></script>
+  <script src="/assets/plugins/flot/source/jquery.flot.browser.js"></script>
+  <script src="/assets/plugins/flot/source/jquery.flot.drawSeries.js"></script>
+  <script src="/assets/plugins/flot/source/jquery.flot.uiConstants.js"></script>
+  <script src="/assets/plugins/flot/source/jquery.flot.time.js"></script>
+  <script src="/assets/plugins/flot/source/jquery.flot.resize.js"></script>
+  <script src="/assets/plugins/flot/source/jquery.flot.pie.js"></script>
+  <script src="/assets/plugins/flot/source/jquery.flot.crosshair.js"></script>
+  <script src="/assets/plugins/flot/source/jquery.flot.categories.js"></script>
+  <script src="/assets/plugins/flot/source/jquery.flot.navigate.js"></script>
+  <script src="/assets/plugins/flot/source/jquery.flot.touchNavigate.js"></script>
+  <script src="/assets/plugins/flot/source/jquery.flot.hover.js"></script>
+  <script src="/assets/plugins/flot/source/jquery.flot.touch.js"></script>
+  <script src="/assets/plugins/flot/source/jquery.flot.selection.js"></script>
+  <script src="/assets/plugins/flot/source/jquery.flot.symbol.js"></script>
+  <script src="/assets/plugins/flot/source/jquery.flot.legend.js"></script>
+  <script src="/assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+  <script src="/assets/plugins/jvectormap-next/jquery-jvectormap.min.js"></script>
+  <script src="/assets/plugins/jvectormap-content/world-mill.js"></script>
+  <script src="/assets/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
+  <script src="/assets/js/demo/dashboard.js"></script>
+  <!-- ================== END page-js ================== -->
+</body>
+
+</html>

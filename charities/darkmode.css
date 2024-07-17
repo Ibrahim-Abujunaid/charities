@@ -1,5 +1,10 @@
 [data-bs-theme=dark] .header-main{
   background: #30343B !important;
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.6);
+}
+[data-bs-theme=dark] .header-main div{
+  border-color: #ffffff;
 }
 [data-bs-theme=dark] .navbar-header{
   background: white !important;
@@ -38,4 +43,23 @@
 [data-bs-theme=dark] .panel {
   box-shadow: none;
   
+}
+[data-bs-theme=dark] .center-Edit a{
+  color: white; 
+}
+[data-bs-theme=dark] .header-main div span{
+  color: #FFF;
+}
+[data-bs-theme=dark] .title{
+  color: #FFF;
+}
+[data-bs-theme=dark] ::-ms-input-placeholder { /* Edge 12-18 */
+  color: #FFF;
+}
+
+[data-bs-theme=dark] ::placeholder {
+  color: #FFF;
+}
+[data-bs-theme=dark] .bi-bag-dash::before{
+  color: #FFF;
 }
